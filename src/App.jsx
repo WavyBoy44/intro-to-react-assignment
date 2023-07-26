@@ -1,4 +1,5 @@
 import "./styles/App.css";
+import UserProfile from "./UserProfile";
 function App() {
   //The array of users to render in the assignment
   const users = [
@@ -50,6 +51,7 @@ function App() {
       </header>
       <div className="user-profile-wrapper">
         {/* Render the array of users using the UserProfile in this div */}
+        {users.map((user) => <UserProfile name={user.name} email={user.email} imgUrl={user.imgUrl} key={user.email} />)}
 
       </div>
     </div>
